@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+<title>Movies</title>
+<link rel="stylesheet" type="text/css" href="content/styles/css/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+<body ng-app="dgMovieApp">
+<div ng-controller="MoviesCtrl">
+  <h1>{{msg}}</h1>
+  <div class="btn-group filter-buttons" data-toggle="buttons">
+    <label class="btn active">
+      <input type="radio" name="options" id="2000s" checked> 2000's
+    </label>
+    <label class="btn">
+      <input type="radio" name="options" id="1900s"> 1900's
+    </label>
+  </div>
+
+  <!-- This belongs inside the ng-repeat, if that was working -->
+  <div class='movie-container'>
+      <img src='content/images/batman-begins.png' />
+      <div>
+        <h2>Batman Begins</h2>
+        <div class='meta-data'>
+            <span class='rating'>PG-13</span>
+            <span class='runtime'>140 min</span>
+            <span class='released'>15 Jun 2005</span>
+        </div>
+          <p>After training with his mentor, Batman begins his war on crime to free the crime-ridden Gotham City from corruption that the Scarecrow and the League of Shadows have cast upon it.</p>
+          <a href='https://www.imdb.com/title/tt0372784/' class='btn imdb'>View on IMDB</a>
+      </div>
+      
+  </div>
+
+  <div ng-repeat='movie in movies'>
+    <p>{{movie.Title}}</p>
+  </div>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.7/angular.min.js"></script>
+<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-resource.js'></script>
+<script src="scripts/app.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

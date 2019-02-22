@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "sass": "node-sass -w content/styles/scss/ -o content/styles/css/"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "node-sass": "^4.11.0"
+  }
+}
